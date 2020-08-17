@@ -30,31 +30,36 @@
                     <span>description</span> <input type="text" id="desc">
                     <span>location</span> <input type="text" id="location">
 
-                    <input type="button" name="add Cats" id="add" value="add cat">
+                    <input type="button" name="add" id="add" value="add cat">
                 </form>
             </div>
 
         </div>
         <div class="row gallery">
             <h2>Cats gallery</h2>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="cardImg" src="samira.jpg" alt="cat photo">
-                    <div class="cardInfo ">
-                        <h4><b>samira</b></h4>
-                        <p>the famous samira </p>
-                        <a class="cardBtn" href="/"> Adopt</a>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
 
 
 
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Get value on button click and show alert
+            $("#add").click(function() {
+                var nom = $("#name").val();
+                var desc = $("#desc").val();
+                var location = $("#location").val();
+
+                /* creation de gallery en utilisant jquery fn */
+                var cards = $('<div class="col-md-4 cards" ><div class="card"> <img class="imgCard cardImg" src="samira.jpg" alt="cat photo"><h4><b class="nom nameCard">' + nom + '</b></h4><p class="descCard">' + desc + '</p> <p>' + location + '</p></div></div>').appendTo('.gallery');;
+
+
+            });
+        });
+    </script>
 </body>
 <footer>
     copyright(c) chaima 2020
