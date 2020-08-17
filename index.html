@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title> home </title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#"></a>
-  <a href="contactus.html ">Contact us</a>
-  <a href="aboutus.html">About us</a>
-  <a href="https://www.rebootkamp.net/">About RBK</a>
-</div>
 
-<div class="card">
-  <img src="samira.jpg" alt="cat photo" style="width:25%">
-  <div class="container">
-    <h4><b>samira</b></h4> 
-    <p>the famous samira </p> 
-  </div>
-</div>
+<head>
+    <title> home </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+</head>
+
+<header class="topHeader">
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#"></a>
+        <a href="contactus.html ">Contact us</a>
+        <a href="aboutus.html">About us</a>
+        <a href="https://www.rebootkamp.net/">About RBK</a>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row formulaires">
+            <div class="col-md-6 addCats">
+                <h2>enter cat informations for adoption</h2>
+                <form action="" class="forms">
+                    <span>cat's name</span> <input type="text" id="name">
+                    <span>description</span> <input type="text" id="desc">
+                    <span>location</span> <input type="text" id="location">
+
+                    <input type="button" name="add Cats" id="add" value="add cat">
+                </form>
+            </div>
+
+        </div>
+        <div class="row gallery">
+            <h2>Cats gallery</h2>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="cardImg" src="samira.jpg" alt="cat photo">
+                    <div class="cardInfo ">
+                        <h4><b>samira</b></h4>
+                        <p>the famous samira </p>
+                        <a class="cardBtn" href="/"> Adopt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </body>
+<footer>
+    copyright(c) chaima 2020
+</footer>
+
 </html>
