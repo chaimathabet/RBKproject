@@ -9,8 +9,8 @@
 <header class="topHeader">
     <div class="topnav">
         <a href="index.html">Home</a>
-        <a href="contactus.html ">Contact us</a>
-        <a href="aboutus.html">About us</a>
+        <a href="aboutus.html">Meet the Members</a>
+        <a href="contactus.html ">More information </a>
         <a href="https://www.rebootkamp.net/">About RBK</a>
         
     </div>
@@ -20,14 +20,16 @@
 
 </header>
 <body>
-   <div id="tabs-container" >
 
-        <div id="tabs-nav" >
+    <div class="container " >
+        <div  id="tabs-container">
+            <div  id="tabs-nav">
+  
             <ul>
                 <li><a href="#" data-id="rayen" class="active">President</a></li>
                 <li><a href="#" data-id="chaima">Membre</a></li>
                 <li><a href="#" data-id="kamel">syndicate</a></li>
-                <li><a href="#" data-id="nouha">financial</a></li>
+                <li><a href="#" data-id="ahmed">financial</a></li>
             </ul>
         </div>
 
@@ -39,7 +41,7 @@
                     <p> HIR in RBK </p>
                 </div>
 
-                <img src="rayen.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+                <img src="rayen.jpg" style="width: 500px; height: 500px;" ; />
             </div>
 
 
@@ -49,7 +51,7 @@
                     <p>Student in RBk </p>
                 </div>
 
-                <img src="chaima.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+                <img src="chaima.jpg" style="width: 500px; height: 500px;" />
             </div>
 
 
@@ -59,15 +61,15 @@
                     <p>student in RBK </p>
                 </div>
 
-                <img src="kamel.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+                <img src="kamel.jpg" style="width: 500px; height:500px; " />
             </div>
 
-            <div class="profile" id="nouha">
+            <div class="profile" id="ahmed">
                 <div class="caption">
-                    <h2>Nouha Chorfi </h2>
-                    <p> HIR in RBK</p>
+                    <h2>Ahmed Kortas </h2>
+                    <p> student in RBK</p>
                 </div>
-
+                 <img src="ahmed.jpg" style="width: 500px; height: 500px;" />
             </div>
 
         </div>
@@ -76,23 +78,12 @@
     </div>
 
 
-    <div>
-        <h3>we are a new association in RBK Tunisia
-            <h3>
-                <p> every day we found cats around RBK and everywhere in tunisia in the street , they are homeless , without food and they need food and care , and we get the idea of helping cats
-                    <p>
 
-                        <div>
-                            <h3>Our vision is a world where every cat is treated with kindness and an understanding of its needs
-                                <h3>
-                                    <p>It’s an ambitious vision. However, we truly believe it can be achieved because of our passion, our professional approach and simply because cats are among the tunisian’s most popular companion pets.
-                                        <p>
-                        </div>
  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script> $(document).ready(function() {
-            // bind our function to the tabs
+            
             $('#tabs-nav ul li a').click(function(e) {
-                // remove the active state from all links
+                // remove the active state 
                 $('#tabs-nav ul li a').removeClass("active");
                 // add the active state to the clicked link
                 $(this).addClass("active");
