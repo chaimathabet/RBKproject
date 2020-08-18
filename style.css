@@ -3,6 +3,9 @@
     transition: 0.3s;
     margin: 20px 0;
     background: linear-gradient(to top, #dff0d8, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cardImg {
@@ -38,12 +41,20 @@
 .container {
     padding: 2px 16px;
 }
-
+#tabs-container{ 
+	padding: 2px 16px;
+ }
+ 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.topHeader{
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+    background-color: #333;
+}
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -60,7 +71,7 @@ body {
 
 .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: white;
 }
 
 .topnav a.active {
@@ -68,6 +79,11 @@ body {
     color: white;
 }
 
+#logo{
+	width: 150px ;
+
+    
+}
 .flip-card {
     background-color: transparent;
     width: 300px;
@@ -132,10 +148,93 @@ body {
 .row.formulaires {
     display: flex;
     justify-content: center;
-}
+  }
 
-.forms {
+.forms{
     display: flex;
     flex-direction: column;
     align-self: center;
 }
+
+/*  aboutus style */
+    #tabs-container {
+        background: #000;
+        height: 400px;
+        width: 900px;
+    }
+    
+    #tabs-nav {
+        float: left;
+        width: 280px;
+    }
+    
+    #tabs-nav .logo {
+        float: left;
+    }
+    
+    #tabs-nav ul {
+        font-family: Garamond, Georgia;
+        font-size: 1em;
+        list-style: none;
+    }
+    
+    #tabs-nav ul li {
+        border-top: 1px solid #000;
+        float: left;
+    }
+    
+    #tabs-nav ul li a {
+        color: #999;
+        display: block;
+        height: 19px;
+        padding: 30px;
+        width: 220px;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #000;
+    }
+    
+    #tabs-nav ul li a:hover {
+        background-position: 0 -79px;
+    }
+    
+    #tabs-nav ul li a.active {
+        background-position: 0 -158px;
+        color: #fff;
+    }
+    
+    #tabs-content {
+        float: left;
+        height: 400px;
+        width: 620px;
+    }
+    
+    #tabs-content .profile {
+        display: none;
+        /* hide by default */
+        height: 400px;
+        position: relative;
+        width: 620px;
+    }
+    
+    #tabs-content .profile .caption {
+        padding: 30px;
+        position: absolute;
+        right: 0;
+        top: 200px;
+        width: 220px;
+    }
+    
+    #tabs-content .profile .caption h2 {
+        color: #fff;
+        font-family: Garamond, Georgia;
+        margin: 0 0 10px;
+    }
+    
+    #tabs-content .profile .caption p {
+        color: #ccc;
+        font-family: Arial;
+        font-size: .75em;
+        line-height: 1.5em;
+        margin: 0;
+        text-align: left;
+    }

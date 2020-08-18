@@ -12,19 +12,23 @@
 
 <header class="topHeader">
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#"></a>
+        <a href="index.html">Home</a>
         <a href="contactus.html ">Contact us</a>
         <a href="aboutus.html">About us</a>
         <a href="https://www.rebootkamp.net/">About RBK</a>
+        
     </div>
+    <div class="topnavright">
+         <a href="#" ><img id="logo" src="logo.png " alt="logo"></a>
+    </div>
+
 </header>
 
 <body>
     <div class="container">
         <div class="row formulaires">
             <div class="col-md-6 addCats">
-                <h2>enter cat informations for adoption</h2>
+                <h2>  pleaze fill the cat's form for adoption</h2>
                 <form action="" class="forms">
                     <span>cat's name</span> <input type="text" id="name">
                     <span>description</span> <input type="text" id="desc">
@@ -35,6 +39,7 @@
             </div>
 
         </div>
+
         <div class="row gallery">
             <h2>Cats gallery</h2>
         </div>
@@ -47,18 +52,30 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
         $(document).ready(function() {
-            // Get value on button click and show alert
+            // Get value on button click from the input
+            var count = 0;
             $("#add").click(function() {
                 var nom = $("#name").val();
                 var desc = $("#desc").val();
                 var location = $("#location").val();
+                count++;
+                /* creation of gallery using jquery fn */
+                var cards = $('<div class="col-md-4 cards" > <div class="card"> <img class="imgCard cardImg" src="samira.jpg" alt="cat photo"><h4><b class="nom nameCard">' + nom + '</b></h4><p class="descCard">' + desc + '</p> <p>' + location + '</p><input type="button" class="cardBtn" id="' + count + '" value="adopt" onclick="adopted(' + count + ');" ></div></div> ').appendTo('.gallery');
 
-                /* creation de gallery en utilisant jquery fn */
-                var cards = $('<div class="col-md-4 cards" ><div class="card"> <img class="imgCard cardImg" src="samira.jpg" alt="cat photo"><h4><b class="nom nameCard">' + nom + '</b></h4><p class="descCard">' + desc + '</p> <p>' + location + '</p></div></div>').appendTo('.gallery');;
 
 
             });
+            // Get value on button click from the input
+
         });
+
+        function adopted(x) {
+            console.log('im here', x);
+            var btn = '#' + x; // auto incrimented id called by fn
+            $(btn).attr('value', 'adopted');
+            $("#cardBtn").attr('disabled', true);
+
+        }
     </script>
 </body>
 <footer>

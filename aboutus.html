@@ -2,45 +2,79 @@
 <html>
 
 <head>
-    <title> contact us </title>
+    <title> About Us </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-<body>
+<header class="topHeader">
     <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="#"></a>
+        <a href="index.html">Home</a>
         <a href="contactus.html ">Contact us</a>
         <a href="aboutus.html">About us</a>
         <a href="https://www.rebootkamp.net/">About RBK</a>
+        
+    </div>
+    <div class="topnavright">
+         <a href="#" ><img id="logo" src="logo.png " alt="logo"></a>
     </div>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1>Rayen raffa </h1>
-                <p>software Engineer</p>
-                <p>HIR in RBK</p>
-            </div>
+</header>
+<body>
+   <div id="tabs-container" >
+
+        <div id="tabs-nav" >
+            <ul>
+                <li><a href="#" data-id="rayen" class="active">President</a></li>
+                <li><a href="#" data-id="chaima">Membre</a></li>
+                <li><a href="#" data-id="kamel">syndicate</a></li>
+                <li><a href="#" data-id="nouha">financial</a></li>
+            </ul>
         </div>
+
+        <div id="tabs-content">
+
+            <div class="profile" id="rayen" style="display:block;">
+                <div class="caption">
+                    <h2>Rayen Raffa</h2>
+                    <p> HIR in RBK </p>
+                </div>
+
+                <img src="rayen.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+            </div>
+
+
+            <div class="profile" id="chaima">
+                <div class="caption">
+                    <h2>Thabet Chaima</h2>
+                    <p>Student in RBk </p>
+                </div>
+
+                <img src="chaima.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+            </div>
+
+
+            <div class="profile" id="kamel">
+                <div class="caption">
+                    <h2> Kamel Rach</h2>
+                    <p>student in RBK </p>
+                </div>
+
+                <img src="kamel.jpg" style="width: 250px; height: 250px; padding: 60 25 ;" />
+            </div>
+
+            <div class="profile" id="nouha">
+                <div class="caption">
+                    <h2>Nouha Chorfi </h2>
+                    <p> HIR in RBK</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1> Chaima Thabet </h1>
-                <p> </p>
-                <p>Student in RBK</p>
-            </div>
-        </div>
-    </div>
 
     <div>
         <h3>we are a new association in RBK Tunisia
@@ -54,6 +88,26 @@
                                     <p>It’s an ambitious vision. However, we truly believe it can be achieved because of our passion, our professional approach and simply because cats are among the tunisian’s most popular companion pets.
                                         <p>
                         </div>
+ <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script> $(document).ready(function() {
+            // bind our function to the tabs
+            $('#tabs-nav ul li a').click(function(e) {
+                // remove the active state from all links
+                $('#tabs-nav ul li a').removeClass("active");
+                // add the active state to the clicked link
+                $(this).addClass("active");
+                // fade out the current container
+                $('.profile').fadeOut(500, function() {
+                    // fade in the clicked container
+                    $('#' + profileID).fadeIn(500);
+                });
+                // define our current profile variable
+                var profileID = $(this).attr("data-id");
+            });
+        });
+
+</script>
 </body>
 
 </html>
+
